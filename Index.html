@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reponsive navbar</title>
+        <link ref="stylesheet" href="ItEducation.css">
+        <style>
+            :root{
+               /*colors*/
+
+                --first-color:#f8b400;
+                --second-color:#faf5e4;
+                --third-color:#2c786c;
+                --fourth-color:#004445;
+                --five-color:#194769;
+                --six-color:#f6f6e9;
+                --seven-color:#8ed9e6;
+                --eight-color:#f2855e;
+                --nine-color:#fafcfc48;
+                --ten-color:#070807;
+                --eleven-color:#ffffff;
+                --twov-color:#605f5f;
+               
+
+                /*text-bold*/
+                --text-size-adjust:2%;
+            }
+            body{
+                
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            /********************home**********************/
+            #home{
+                width: 100%;
+                height: 700px;
+            }
+            /***********navbar****************/
+            nav a {
+            text-decoration: none;
+            color: var(--eleven-color);
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--eight-color);
+        }
+
+        .active {
+            color: var(--eight-color);
+        }
+            .scrolled .navbar {
+                background-color: #222;
+            }
+            .healine{
+                margin-top: 0%;
+                color: var( --fourth-color);
+                background-color: var(--six-color);
+                
+            
+            }
+            nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--third-color);
+                padding: 10px 0;
+                z-index: 1000;
+                transition: background-color 0.3s;
+               
+            }
+         
+              /****************title***************/
+            .best{
+                
+                padding-top: 0;
+                width: 50%;
+                margin-left: 5%;
+                font-size: 250%;
+                
+            }
+            .color{
+                
+              color: var(--eight-color);
+            }
+            .note{
+                 font-size: 50%;
+                 margin-top: 0;
+                 color:var(--twov-color);
+            }
+            .video video{
+                width: 300px;
+                height: 500px;
+                
+               
+            }
+            .main{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+            }
+            /*****************About*****************/
+            #about{
+                width: 100%;
+                height: 400px;
+                background-color: var(--first-color);
+                margin-top: 0;
+                padding-top: 0;
+            }
+            .abouttile{
+                margin-top: 3%;
+                font-size: 40px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: #194769;
+                text-align: center;
+            }
+            p{
+                margin-left: 10%;
+                margin-right: 10%;
+                font-size: 20px;
+            }
+            .about-list{
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                
+            }
+            .about-list li {
+                font-size: 1.2em;
+                margin: 0 20px;
+                color: var(--fourth-color);
+                font-style: oblique;
+                font-size: 25px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            /***********************courses***********/
+            #courses{
+                width: 100%;
+                height:900px;
+                
+            }
+            section {
+                scroll-margin-top: 50px; /* Adjust for fixed navbar */
+            }
+
+            .box{
+                width: 100%;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+
+            }
+            .course-card {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 350px;
+                max-height: 400px;
+                overflow: hidden;
+                text-align: center;
+                transition: transform 0.2s;
+                margin: 0 40px;
+                margin-top: 2%;
+                
+            }
+
+            .course-card:hover {
+                transform: scale(1.05);
+            }
+
+            .course-image {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .course-details {
+                padding: 20px;
+            }
+
+            .course-title {
+                font-size: 1.5em;
+                margin: 0;
+                color: var(--eight-color);
+            }
+
+            .course-description {
+                font-size: 0.9em;
+                color: #555;
+                margin: 10px 0;
+            }
+
+            .course-info {
+                display: flex;
+                justify-content: space-between;
+                margin: 15px 0;
+            }
+
+            .course-duration, .course-price {
+                font-weight: bold;
+                color: #333;
+            }
+
+            .enroll-button {
+                background-color:var(--fourth-color);
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .enroll-button:hover {
+                background-color:var(--first-color);
+            }
+            /*****************contact*****************/
+            #contact{
+                width: 100%;
+                height: 300px;
+                background-color: #333;
+                
+                color: #fff;
+                
+                text-align: center;
+                
+               
+            }
+            
+          
+            
+        
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+            color: var(--first-color);
+        }
+
+        </style>
+    </head>
+    <body>
+        <section id="home">
+                <header style="text-align: center;">
+                    
+                        <nav class="nevbar" id="navbar">
+                            <a href="#home" class="nav-link">Home</a>
+                            <a href="#about"class="nav-link">About</a>
+                            <a href="#courses"class="nav-link">Course</a>
+                            <a href="#contact"class="nav-link">Contact</a>
+                        </nav>
+                </header>
+            <div class="main">
+                <div class="best">
+                        
+                        <h1 style="color: var(--fourth-color);"><span class="color">Start </span>Learning and Embrace<span class="color"> New Skills</span> For Better <span class="color">Future</span> </h1>
+                        <p class="note" >With the help of E-Learning, Create your own path and drive on your Skills on your own to achieve you seek</p>
+                </div>
+               
+                <div class="video">
+                    <video controls  loop autoplay muted> 
+                        <source src="D:\Html\desing\menu_bar\photo\videoofcourse.mp4"type="video/mp4" >
+                    </video>
+                </div>
+                
+            </div>
+           
+        </section>
+        <section id="about">
+            <h1 class="healine" style="text-align: center;">About Us</h1>
+            <h1 class="abouttile">Introduce Acadevo We Build Everything</h1>
+            <p>ItEducatiocom has the ambition to enlighten those students who have come here in the pursuit of these courses 
+                like Programming, Developing, Designing and technology. Though, with the help of industry experts, we provide our 
+                students to choose the right path and courses. Our access to video libraries has top-quality courses which have been taught by extremely 
+                skilful members of respective industries.
+            </p>
+            <ul class="about-list">
+                <li>Top-Quality Courses</li>
+                <li>Extreme Video Library</li>
+                <li>Surety of Career Growth</li>
+                <li>Access it anytime and anywhere</li>
+                
+            </ul>
+            <ul class="about-list">
+                <li>A skilled team of teachers</li>
+                <li>Reliable cost for courses</li>
+                <li>25 Years Of Education Experience</li>
+                
+            </ul>
+       
+        </section>  
+        <section id="courses">
+            <h1 class="healine" style="text-align: center;">Courses</h1>
+            <div class="box">
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\web-developer.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">Web Developer</h2>
+                        <p class="course-description">Learn to create stunning, functional websites with our comprehensive web developer course.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 15 weeks</span>
+                            <span class="course-price">$300</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\full-stack-developer.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">FrontEnd Developer</h2>
+                        <p class="course-description">Become a Front End Developer and learn to design and build beautiful, responsive websites.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 10 weeks</span>
+                            <span class="course-price">$250</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\back-end-developer.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">BackEnd Developer</h2>
+                        <p class="course-description">Unlock the power of server-side development with our Back End Developer course.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 10 weeks</span>
+                            <span class="course-price">$250</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="box">
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\data-science.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">Data Science</h2>
+                        <p class="course-description">Delve into data analysis, machine learning, and predictive modeling with our Data Science course.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 15 weeks</span>
+                            <span class="course-price">$300</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\data-analysis.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">Data Analysis</h2>
+                        <p class="course-description">Learn to interpret and visualize complex data sets with our Data Analysis course.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 15 weeks</span>
+                            <span class="course-price">$300</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="D:\Html\desing\menu_bar\photo\php.jpg" alt="Course Image" class="course-image">
+                    <div class="course-details">
+                        <h2 class="course-title">PHP Developer</h2>
+                        <p class="course-description">TBecome a PHP Developer and master the skills to build dynamic, server-side web applications.</p>
+                        <div class="course-info">
+                            <span class="course-duration">Duration: 15 weeks</span>
+                            <span class="course-price">$300</span>
+                        </div>
+                        <button class="enroll-button">Enroll Now</button>
+                    </div>
+                </div>
+            
+                
+                </div>
+
+            
+            </div>
+        </section>
+        <footer id="contact">
+            <h1 class="healine" style="text-align: center;">Contact Us</h1>
+            <div>
+                <p>Contact Us</p>
+                <p>Email: ItEducation@onlinecourse.com</p>
+                <p>Phone: +1-234-567-890</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://facebook.com/onlinecourse" target="_blank">Facebook</a>
+                <a href="https://twitter.com/onlinecourse" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/company/onlinecourse" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/onlinecourse" target="_blank">Instagram</a>
+            </div>
+            <div>
+                <p>About Us</p>
+                <p>Empowering learners worldwide with industry-leading online courses in web development, data science  and more. Start learning today!</p>
+            </div>
+            <div>
+                <p style="color: #004445;">&copy; ITEducation.com</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+            
+    
+        </footer>
+        <script>
+           // JavaScript for navbar behavior on scroll and active link highlighting
+
+        // Selecting all navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+// Adding an event listener to each link
+navLinks.forEach(link => {
+    link.addEventListener('click', smoothScroll);
+});
+
+function smoothScroll(event) {
+    event.preventDefault(); // Prevent default behavior of anchor links
+
+    const targetId = event.target.getAttribute('href').substring(1); // Get target section id
+    const targetSection = document.getElementById(targetId); // Get the actual section element
+    const sectionTop = targetSection.offsetTop; // Get the top position of the section
+
+    window.scrollTo({
+        top: sectionTop - 50, // Adjusted for fixed navbar height
+        behavior: 'smooth'
+    });
+
+    setActiveLink(targetId); // Set active class to the clicked link
+}
+
+// Function to set active link based on scroll position
+function setActiveLink(currentId) {
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href').substring(1);
+        if (href === currentId) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Function to toggle navbar background color on scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const scrolled = window.scrollY > 50;
+
+    if (scrolled) {
+        navbar.style.backgroundColor = '#222'; // Change to desired color
+    } else {
+        navbar.style.backgroundColor = 'var(--third-color)'; // Default color
+    }
+});
+
+// Function to handle active link on initial page load
+function handleActiveLinkOnLoad() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        const scrollPosition = window.scrollY + 50;
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+            const id = section.getAttribute('id');
+            setActiveLink(id);
+        }
+    });
+}
+
+// Call the function initially and on scroll
+handleActiveLinkOnLoad();
+window.addEventListener('scroll', handleActiveLinkOnLoad);
+           </script>
+        
+    </body>
+</html>
